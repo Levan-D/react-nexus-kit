@@ -9,8 +9,9 @@ const RootLayout = () => {
     <div className="flex min-h-screen  flex-col">
       <Navbar />
 
-      <main className="mx-auto min-w-full max-w-6xl grow">
-        <Outlet />
+      <main className="mx-auto w-full max-w-6xl grow">
+              <Outlet /> 
+              
       </main>
 
       <Footer />
