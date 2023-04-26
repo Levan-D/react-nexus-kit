@@ -26,8 +26,14 @@ function copyFolderSync(from, to) {
       return
     }
 
-    const fromPath = path.join(from, file)
-    const toPath = path.join(to, file)
+    let fromPath = path.join(from, file)
+    let toPath = path.join(to, file)
+
+    // If the file is 'package.template.json', copy it as 'package.json'
+    if (file === "package.template.json") {
+      toPath = path.join(to, "package.json")
+    }
+
     const stat = fs.statSync(fromPath)
 
     if (stat.isFile()) {
