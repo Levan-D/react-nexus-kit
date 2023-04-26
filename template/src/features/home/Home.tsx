@@ -1,4 +1,6 @@
-import { Helmet } from "react-helmet";
+/** @format */
+
+import { Helmet } from "react-helmet"
 
 export default function Home() {
   return (
@@ -33,5 +35,5 @@ export default function Home() {
       </Helmet>
       <div>zis is ze content</div>
     </div>
-  );
+  )
 }

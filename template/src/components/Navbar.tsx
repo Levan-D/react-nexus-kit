@@ -1,5 +1,7 @@
-import githubIcon from "../assets/github.png";
-import logo from "../assets/logo.png";
+/** @format */
+
+import githubIcon from "../assets/github.png"
+import logo from "../assets/logo.png"
 
 export default function Navbar() {
   return (
@@ -10,24 +12,15 @@ export default function Navbar() {
             <img className="mx-auto my-3.5 h-7" src={logo} alt="logo" />
           </li>
 
-          <div className=" items-center gap-8 text-center md:flex">
-            <li>Nav One</li>
-            <li>Nav Two</li>
-            <li>Nav Three</li>
-          </div>
-
           <li
             className={` my-3.5 h-7 shrink-0 cursor-pointer select-none rounded-full border-2  border-transparent  duration-300   md:hover:border-white`}
           >
-            <a
-              href="https://github.com/Levan-D/react-nexus-kit"
-              target="_blank"
-            >
+            <a href="https://github.com/Levan-D/react-nexus-kit" target="_blank">
               <img className="mx-auto h-6" src={githubIcon} alt="github icon" />
             </a>
           </li>
         </ul>
       </nav>
     </div>
-  );
+  )
 }
