@@ -1,14 +1,8 @@
 {
   "name": "react-nexus-kit",
-  "private": false,
-  "version": "0.0.9np",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
-  "bin": {
-    "init-react-nexus-kit": "./cli.js"
-  },
-  "files": [
-    "template/"
-  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
