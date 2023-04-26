@@ -1,7 +1,7 @@
 {
   "name": "react-nexus-kit",
   "private": false,
-  "version": "0.0.9np",
+  "version": "0.0.12",
   "type": "module",
   "bin": {
     "init-react-nexus-kit": "./cli.js"
@@ -10,6 +10,7 @@
     "template/"
   ],
   "scripts": {
+    "install": "node ./cli.js",
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
