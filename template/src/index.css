@@ -54,31 +54,33 @@ body {
   }
 }
 
-@property --l {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 10%;
-}
-
-.gradient-animation {
-  /*  needed for firefox to have a valid output */
-  --l: 60%;
-  /**/
-
-  transition: --l 2s;
-  background: radial-gradient(
-    ellipse at 50% 50%,
-    rgba(15, 23, 42, 1) 20%,
-    rgba(2, 6, 23, 1) var(--l)
-  );
-  animation: a 2s linear infinite alternate;
-}
-
-@keyframes a {
-  from {
-    --l: 45%;
+@media screen and (min-width: 768px) {
+  @property --l {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 10%;
   }
-  to {
+
+  .gradient-animation {
+    /*  needed for firefox to have a valid output */
     --l: 60%;
+    /**/
+
+    transition: --l 2s;
+    background: radial-gradient(
+      ellipse at 50% 50%,
+      rgba(15, 23, 42, 1) 20%,
+      rgba(2, 6, 23, 1) var(--l)
+    );
+    animation: a 2s linear infinite alternate;
+  }
+
+  @keyframes a {
+    from {
+      --l: 45%;
+    }
+    to {
+      --l: 60%;
+    }
   }
 }

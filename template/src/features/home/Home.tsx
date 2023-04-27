@@ -31,7 +31,7 @@ export default function Home() {
       </Helmet>
 
       <div>
-        <div className="mx-auto mt-20 w-fit">
+        <div className="mx-auto mt-8 w-fit md:mt-20">
           <a href="https://github.com/Levan-D/react-nexus-kit" target="_blank">
             <img
               src={logo}
