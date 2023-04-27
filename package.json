@@ -6,6 +6,10 @@
   "author": "Levan_D",
   "license": "MIT License",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Levan-D/react-nexus-kit.git"
+  },
   "keywords": [
     "react",
     "reactjs",
