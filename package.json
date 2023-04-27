@@ -1,7 +1,7 @@
 {
-  "name": "react-nexus-kit-999",
+  "name": "react-nexus-kit",
   "private": false,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "RNK combines multiple react packages that synergize well & has basic boilerplate code prewritten to allow you to hit the ground running!",
   "author": "Levan_D",
   "license": "MIT License",

@@ -57,8 +57,8 @@ exec("npm install", { cwd: destinationPath }, (error, stdout, stderr) => {
   }
   console.log(stdout)
   console.error(stderr)
+
+  // Stop the spinner and display a success message after the installation is completed
+  spinner.succeed("React Nexus Kit setup complete!")
   console.log("Project dependencies installed successfully!")
 })
-
-// Stop the spinner and display a success message
-spinner.succeed("React Nexus Kit setup complete!")
