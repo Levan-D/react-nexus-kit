@@ -70,8 +70,6 @@ root
 └── .gitignore
 ```
 
-After app has  initialized, type 'npm run dev' to start.
-
 # Commands
 
 Start
