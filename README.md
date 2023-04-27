@@ -1,3 +1,5 @@
+<!-- @format -->
+
 ![Banner with logo](https://i.imgur.com/xtTrKiR.png)
 
 # React Nexus Kit

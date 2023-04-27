@@ -5,6 +5,8 @@ import fs from "fs"
 import path from "path"
 import { fileURLToPath } from "url"
 import { cwd } from "node:process"
+import { exec } from "child_process"
+import ora from "ora"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -41,5 +43,22 @@ function copyFolderSync(from, to) {
 // Exclude certain files from being copied, such as cli.js
 const excludedFiles = ["cli.js", "package-lock.json"]
 
+// Display a spinner while copying the template files
+const spinner = ora("Setting up React Nexus Kit...").start()
+
 // Copy the template files and folders to the user's working directory
 copyFolderSync(sourcePath, destinationPath)
+
+// Run npm install in the destination directory
+exec("npm install", { cwd: destinationPath }, (error, stdout, stderr) => {
+  if (error) {
+    console.error(`Error executing 'npm install': ${error.message}`)
+    return
+  }
+  console.log(stdout)
+  console.error(stderr)
+  console.log("Project dependencies installed successfully!")
+})
+
+// Stop the spinner and display a success message
+spinner.succeed("React Nexus Kit setup complete!")
