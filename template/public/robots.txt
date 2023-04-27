@@ -1,2 +1,31 @@
+# The robots.txt file is a plain text file that provides instructions to web
+# crawlers, like search engine bots, on how to crawl and index the pages of
+# your website. It's a way to communicate with these crawlers and guide them
+# through your site.
+
 User-agent: *
 Disallow:
+
+# This example has two lines:
+# 1. User-agent: * - This line specifies that the rules that follow apply to all
+#    web crawlers (the * is a wildcard that matches any user agent).
+# 2. Disallow: - This line tells the web crawlers that they are allowed to crawl
+#    and index all pages on the site (an empty Disallow directive means no
+#    restrictions).
+
+# To create more specific rules, follow these steps:
+# 1. Start with the "User-agent" line to specify the web crawler the rule applies
+#    to (use * for all crawlers or specify a specific crawler's name).
+# 2. Add "Disallow" lines to specify the parts of your site that you want to block
+#    from crawling.
+# 3. (Optional) Add "Allow" lines to specify exceptions to the Disallow rules.
+
+# Remember to update your robots.txt file as needed to ensure that you're guiding
+# web crawlers effectively through your site. Place the robots.txt file in the
+# root directory of your site (e.g., https://example.site/robots.txt) so that
+# crawlers can find it easily.
+
+# Note that not all web crawlers follow the rules set in robots.txt, and the file
+# is publicly accessible, so don't use it to hide sensitive information. It's
+# meant to guide well-behaved crawlers, like search engine bots, in indexing
+# your site.

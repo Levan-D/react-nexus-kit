@@ -1,7 +1,26 @@
+# Disable MultiViews option to avoid content negotiation
 Options -MultiViews
-       RewriteEngine On
-       RewriteBase /
-       RewriteCond %{REQUEST_FILENAME} !-f
-       RewriteCond %{REQUEST_FILENAME} !-d
-       RewriteCond %{REQUEST_URI} !^/?(favicon\.ico|assets)
-       RewriteRule ^(.*)$ /index.html [L,QSA]
+
+# Enable Apache's mod_rewrite module
+RewriteEngine On
+
+# Set the base URL for the rewrite rules
+RewriteBase /
+
+# If the requested file is not an actual file on the server, proceed to the next condition
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# If the requested file is not an actual directory on the server, proceed to the next condition
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# If the requested URI is not for a favicon.ico or an asset file, proceed to the rewrite rule
+RewriteCond %{REQUEST_URI} !^/?(favicon\.ico|assets)
+
+# Redirect all remaining requests to index.html, while preserving query string parameters
+RewriteRule ^(.*)$ /index.html [L,QSA]
+
+# Explanation:
+# This .htaccess configuration ensures that all requests not for actual files or directories
+# and not for specific resources like favicon.ico or assets will be redirected to index.html.
+# This is useful for single-page applications like React apps, where the client-side router
+# handles routing instead of the server.

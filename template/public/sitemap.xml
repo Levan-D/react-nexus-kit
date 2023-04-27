@@ -1,3 +1,20 @@
+<!-- 
+A sitemap is an XML file that lists the URLs of a website to help search engines like Google discover and index its content. It serves as a "map" for search engines to find and prioritize your site's pages.
+
+To create a sitemap, follow these steps:
+1. Start with the basic sitemap structure (like the example below).
+2. For each URL you want to include, create a new <url> entry within the <urlset> element.
+3. Within each <url> entry, add the following elements:
+   - <loc>: The ABSOLUTE URL of the page (e.g., https://example.site/page1)
+   - <lastmod>: The date the page was last modified, in the format YYYY-MM-DD (e.g., 2023-04-17)
+   - <changefreq>: How often the content is expected to change (e.g., daily, weekly, monthly, yearly, never)
+   - <priority>: A value between 0.0 and 1.0 that indicates the priority of the URL relative to other URLs on your site (1.0 is the highest priority)
+
+Remember to add more URLs as needed to ensure that all important pages on your site are included in the sitemap.
+
+After creating your sitemap, submit it to search engines like Google through their respective webmaster tools to help them discover and index your content more efficiently.
+-->
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
