@@ -1,3 +1,5 @@
+/** @format */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -22,4 +24,61 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+.logo {
+  transition: transform 300ms, filter 300ms;
+  transform: scale(1);
+}
+
+.logo:hover {
+  filter: drop-shadow(0px 0px 28px rgba(39, 225, 193, 0.6));
+  animation: rotation-ease-in 2s ease-in forwards, rotation-linear 1.4s linear infinite 2s;
+}
+
+@keyframes rotation-ease-in {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.2);
+  }
+}
+
+@keyframes rotation-linear {
+  0% {
+    transform: rotate(0deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.2);
+  }
+}
+
+@property --l {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 10%;
+}
+
+.gradient-animation {
+  /*  needed for firefox to have a valid output */
+  --l: 60%;
+  /**/
+
+  transition: --l 2s;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    rgba(15, 23, 42, 1) 20%,
+    rgba(2, 6, 23, 1) var(--l)
+  );
+  animation: a 2s linear infinite alternate;
+}
+
+@keyframes a {
+  from {
+    --l: 45%;
+  }
+  to {
+    --l: 60%;
+  }
 }
